@@ -1,0 +1,46 @@
+!1513;s
+J
+SAU0JGRASP_MAIN_BOUNDS=%<CONTROL_SHELL_BOUNDS>\012PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
+SCU0JGRASP_MAIN_BOUNDS=%<CONTROL_SHELL_BOUNDS>\012PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
+S+U0JGRASP_MAIN_BOUNDS=%<CONTROL_SHELL_BOUNDS>\012PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
+SJU0JGRASP_MAIN_BOUNDS=%<CONTROL_SHELL_BOUNDS>\012CLASSPATH=+%;%<EXTENSION_CLASSPATHS>\012CLASSPATH+=%<JGRASP_CLASSPATHS>%;\012File\012CLASSPATH+=.%;\012CLASSPATH+=%<SRC_CLASSPATHS>%;\012ProjectOrFile\012PATH+=%<JAVA_BIN_DIR>%;\012PATH+=%<JGRASP_PATHS>%;\012Debug +Debug_Applet\012CLASSPATH=+%;%<INJECTION_CLASSPATHS>\012Compile\012NOT_FOUND_MESSAGE==Make sure you have the full JDK, not just the JRE, installed.\\nThe JDK is available from http://www.oracle.com/technetwork/java/index.html.\012Run_Applet +Debug_Applet\012ADD_APPLETVIEWER_CLASSPATH==Y\012Document\012CLASSPATH=+%;%<TOOL_CLASSPATHS>\012CLASSPATH+=%<CLASSES_DIR>%;\012
+SXU0
+SOU0JGRASP_MAIN_BOUNDS=%<CONTROL_SHELL_BOUNDS>\012PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
+SyU0JGRASP_MAIN_BOUNDS=%<CONTROL_SHELL_BOUNDS>\012PATH+=%<PYTHON_PATH>%;\012PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning\012GCC_COLORS=
+SPU0
+s#i0
+s#k0
+s#j0
+s#l0
+!214;g
+%\011SoftballPlayer.java
+%\011Outfielder.java
+%\011SoftballTeam.java
+%\011RatingComparator.java
+%\011NameComparator.java
+%\011Infielder.java
+%\011ReliefPitcher.java
+%\011Pitcher.java
+%\011SoftballPlayersPart2.java
+!214;f
+%\011SoftballPlayer.java
+%\011Outfielder.java
+%\011SoftballTeam.java
+%\011RatingComparator.java
+%\011NameComparator.java
+%\011Infielder.java
+%\011ReliefPitcher.java
+%\011Pitcher.java
+%\011SoftballPlayersPart2.java
+!221;l
+%\011ReliefPitcherTest.java
+%\011OutfielderTest.java
+%\011SoftballTeamTest.java
+%\011RatingComparatorTest.java
+%\011SoftballPlayersPart2Test.java
+%\011NameComparatorTest.java
+%\011PitcherTest.java
+%\011InfielderTest.java
+!1798;t
+jgrJUnit0xr	%\011ReliefPitcherTest.java	1555367464999:P%\011ReliefPitcher.java	%\011OutfielderTest.java	1555367464999:P%\011Outfielder.java	%\011SoftballTeam.java	1555367534093:P%\011SoftballTeamTest.java	%\011RatingComparator.java	1555367464999:P%\011RatingComparatorTest.java	%\011SoftballPlayersPart2Test.java	1555367464999:P%\011SoftballPlayersPart2.java	%\011ReliefPitcher.java	1555367464999:P%\011ReliefPitcherTest.java	%\011Pitcher.java	1555367464999:P%\011PitcherTest.java	%\011SoftballPlayersPart2.java	1555367464999:P%\011SoftballPlayersPart2Test.java	%\011Outfielder.java	1555367464999:P%\011OutfielderTest.java	%\011SoftballTeamTest.java	1555367534093:P%\011SoftballTeam.java	%\011RatingComparatorTest.java	1555367464999:P%\011RatingComparator.java	%\011NameComparator.java	1555367464999:P%\011NameComparatorTest.java	%\011NameComparatorTest.java	1555367464999:P%\011NameComparator.java	%\011Infielder.java	1555367464999:P%\011InfielderTest.java	%\011PitcherTest.java	1555367464999:P%\011Pitcher.java	%\011InfielderTest.java	1555367464999:P%\011Infielder.java	
+jgrCheckstyle0xr	%\011SoftballPlayer.java	1555367459481:P	%\011ReliefPitcherTest.java	1555367459481:P	%\011OutfielderTest.java	1555367459481:P	%\011SoftballTeam.java	1555367459481:P	%\011RatingComparator.java	1555367459481:P	%\011SoftballPlayersPart2Test.java	1555367459481:P	%\011ReliefPitcher.java	1555367459481:P	%\011Pitcher.java	1555367459481:P	%\011SoftballPlayersPart2.java	1555367459481:P	%\011Outfielder.java	1555367459481:P	%\011SoftballTeamTest.java	1555367459481:P	%\011RatingComparatorTest.java	1555367459481:P	%\011NameComparator.java	1555367459481:P	%\011NameComparatorTest.java	1555367459481:P	%\011Infielder.java	1555367459481:P	%\011PitcherTest.java	1555367459481:P	%\011InfielderTest.java	1555367459481:P	

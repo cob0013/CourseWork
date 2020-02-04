@@ -1,0 +1,210 @@
+import java.util.Arrays;
+
+/**
+* Defines a library of selection methods
+* on arrays of ints.
+*
+* @author   Carson Barnett(cob0013@auburn.edu)
+* @version  09/01/19
+*
+*/
+public final class Selector {
+
+   /**
+    * Can't instantiate this class.
+    *
+    * D O   N O T   C H A N G E   T H I S   C O N S T R U C T O R
+    *
+    */
+   private Selector() { }
+
+
+   /**
+    * Selects the minimum value from the array a. This method
+    * throws IllegalArgumentException if a is null or has zero
+    * length. The array a is not changed by this method.
+    */
+   public static int min(int[] a) {
+      if (a == null|| a.length == 0) {
+         throw new IllegalArgumentException("Illegal input");
+      }
+      int min = a[0];
+      for (int num : a) {
+         if (num < min) min = num;
+      }
+      return min;
+   }
+
+
+   /**
+    * Selects the maximum value from the array a. This method
+    * throws IllegalArgumentException if a is null or has zero
+    * length. The array a is not changed by this method.
+    */
+   public static int max(int[] a) {
+      if (a == null|| a.length == 0) {
+         throw new IllegalArgumentException("Illegal input");
+      }
+      int max = a[0];
+      for (int num : a) {
+         if (num > max) max = num;
+      }
+      return max;
+   }
+
+
+   /**
+    * Selects the kth minimum value from the array a. This method
+    * throws IllegalArgumentException if a is null, has zero length,
+    * or if there is no kth minimum value. Note that there is no kth
+    * minimum value if k < 1, k > a.length, or if k is larger than
+    * the number of distinct values in the array. The array a is not
+    * changed by this method.
+    */
+   public static int kmin(int[] a, int k) {
+     //solution is kth unique element after sorting
+      if (a == null || a.length == 0 ) {
+         throw  new IllegalArgumentException("Illegal input");
+      }
+      int[] b = Arrays.copyOf(a, a.length);
+      Arrays.sort(b);
+      int unique = 1; //counter of unique elements
+      //uses two increments one to count unique elements one to cycle through array
+
+      for (int i = 1; i < b.length + 1; i++) {
+
+         if (unique == k) { //if number of unique elemnts = k then previous is your kmin
+            return (b[i - 1]);
+         }
+         if (i >= b.length || k > b.length || k < 1) { //if you get to end of array without kmin throw no k
+           //put here to avoid null pointer acception before performing the following if statement
+            throw new IllegalArgumentException("No K");
+         }
+         if (b[i] != b[i - 1]) {
+            unique++;
+         }
+      }
+      return -1;
+   }
+
+
+   /**
+    * Selects the kth maximum value from the array a. This method
+    * throws IllegalArgumentException if a is null, has zero length,
+    * or if there is no kth maximum value. Note that there is no kth
+    * maximum value if k < 1, k > a.length, or if k is larger than
+    * the number of distinct values in the array. The array a is not
+    * changed by this method.
+    */
+   public static int kmax(int[] a, int k) {
+     //solution is kth unique element from end after sorting
+      if (a == null || a.length == 0 ) {
+         throw  new IllegalArgumentException("Illegal input");
+      }
+      int[] b = Arrays.copyOf(a, a.length);
+      Arrays.sort(b);
+      int unique = 1; //uniqe values seen counter
+
+      for (int i = b.length - 2; i >= -1; i--) {
+         if (unique == k) { //if number of unique elemnts = k then previous is your kmin
+            return (b[i  + 1]);
+         }
+         if (i <= -1 || k < 1 || k > b.length) { //if you get through end of array without kmin throw no k
+            throw new IllegalArgumentException("No K");
+         }
+         if (b[i] != b[i + 1]) {
+            unique++;
+         }
+      }
+      return -1;
+   }
+
+
+   /**
+    * Returns an array containing all the values in a in the
+    * range [low..high]; that is, all the values that are greater
+    * than or equal to low and less than or equal to high,
+    * including duplicate values. The length of the returned array
+    * is the same as the number of values in the range [low..high].
+    * If there are no qualifying values, this method returns a
+    * zero-length array. Note that low and high do not have
+    * to be actual values in a. This method throws an
+    * IllegalArgumentException if a is null or has zero length.
+    * The array a is not changed by this method.
+    */
+   public static int[] range(int[] a, int low, int high) {
+
+      if (a == null || a.length == 0 ) {
+         throw new IllegalArgumentException("Illegal Input");
+      }
+      int count = 0;
+      int[] output;
+      for (int num : a) { //cyled through array getting count in range so
+        // I know what size to initialize array to
+         if (num <= high && num >= low) {
+            count++;
+         }
+      }
+      output = new int[count];
+      count = 0;
+      for (int i = 0; i < a.length; i++) {
+         if (a[i] <= high && a[i] >= low) {
+            output[count] = a[i];
+            count++;
+         }
+
+      }
+
+      return output;
+   }
+
+
+   /**
+    * Returns the smallest value in a that is greater than or equal to
+    * the given key. This method throws an IllegalArgumentException if
+    * a is null or has zero length, or if there is no qualifying
+    * value. Note that key does not have to be an actual value in a.
+    * The array a is not changed by this method.
+    */
+   public static int ceiling(int[] a, int key) {
+      if (a == null || a.length == 0 ) {
+         throw new IllegalArgumentException("Illegal Input");
+      }
+      int ceiling = Integer.MAX_VALUE;
+      boolean ceilingFound = false;
+      for (int num: a) {
+         if (num <= ceiling && num >= key) {
+            ceiling = num;
+            ceilingFound = true;
+         }
+      }
+      if (!ceilingFound) {
+         throw new IllegalArgumentException();
+      }
+      return ceiling;
+   }
+
+
+   /**
+    * Returns the largest value in a that is less than or equal to
+    * the given key. This method throws an IllegalArgumentException if
+    * a is null or has zero length, or if there is no qualifying
+    * value. Note that key does not have to be an actual value in a.
+    * The array a is not changed by this method.
+    */
+   public static int floor(int[] a, int key) {
+      if (a == null || a.length == 0 ) {
+         throw new IllegalArgumentException("Illegal Input");
+      }
+      int floor = Integer.MIN_VALUE; //min int
+      boolean floorFound = false; //checks if array contains a floor
+      for (int num: a) {
+         if (num <= key && num >= floor) {
+            floor = num;
+            floorFound = true;
+         }
+      }
+      if (!floorFound) throw new IllegalArgumentException();
+      return floor;
+   }
+}

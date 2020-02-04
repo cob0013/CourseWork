@@ -1,0 +1,26 @@
+/**
+*description
+*
+*ACTIVITY
+*@CarsonBarnett-COMP1210-03
+*@date
+*/
+
+public class TITLE
+{
+/**
+*description
+*@param args command line argument (not used)
+*/
+public static vod main(String [] args)
+
+
+import java.util.Scanner;
+
+Scanner scan = new Scanner(System.in);
+1
+
+variable = scan.nextType();
+
+
+vartype name = Type.parseType(userInput.nextline());
