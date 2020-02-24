@@ -1,3 +1,8 @@
+/* project2_cob0013.cpp
+* AUTHOR: Carson Barnett (cob0013@auburn.edu)
+*compiled in server with g++ 
+*used handout as a template
+*/
 #include <iostream>
 #include <stdlib.h>
 #include <assert.h>
@@ -9,9 +14,9 @@ using namespace std;
 
 const int AARON_ACCURACY = 33;
 const int BOB_ACCURACY = 50;
+const int TOTAL_RUNS = 10000;
 bool firstShot = true;
 bool BobAlive, CharlieAlive, AaronAlive = true;
-const int TOTAL_RUNS = 10000;
 int aaronWins1 = 0;
 int bobWins1 = 0;
 int charlieWins1 = 0;
