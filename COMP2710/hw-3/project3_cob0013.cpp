@@ -1,6 +1,6 @@
 /* project3_cob0013.cpp
 * AUTHOR: Carson Barnett (cob0013@auburn.edu)
-*compiled in server with g++ 
+*compiled in server with g++ -std=c++11
 *used handout as a template, along with google for syntax questions with vectors
 */
 
