@@ -1,0 +1,20 @@
+Name: Carson Barnett 
+AUID: cob0013 
+Hours Spent: 8 
+Consulted With: provide names or AUID of any students, TAs, or professors you consulted with on the assignment. If you did not consult with anyone, you must explicitly write NONE.
+Resources Used: Any books, papers, or online resources. If you did not use any outside resources, you must explicitly write NONE 
+Rahmatullah Roche (rzr0057)
+https://www.geeksforgeeks.org/java-math-max-method-examples
+https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
+usedhttps://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html
+https://www.geeksforgeeks.org/
+https://stackoverflow.com/questions/1846225/java-priorityqueue-with-fixed-size
+https://stackoverflow.com/questions/2451650/how-do-i-apply-the-for-each-loop-to-every-character-in-a-string
+https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html
+Impressions: Your answer here
+I really enjoyed the project and how it was layed out. It was definitely difficult
+but the instructions were clear. To me the hardest part of the project 
+was the deliverables and analyzing the code I had written.
+
+
+
