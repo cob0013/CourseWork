@@ -1,0 +1,37 @@
+1. When thread_exit() is called, causes the current thread to exit. It
+also cleans up the parts of the thread structure we don't need right away.
+The rest has to wait until thread_destroy gets called. When thread_sleep()
+is called it yields the cpu to another process, and goes to sleepk
+on "sleep address" ADDR. In order to do this interrupts be off, and also
+yoou cannot sleep in an interrupt handler.
+
+2. mi_switch in thread.c and md_switch in pcb.c
+
+3. four states: S_RUN, S_READY, S_SLEEP, and S_ZOMB
+
+4. When interrupts are turned off, if an interrupt is handled, no context
+switch will happen from the current thread. They are turned off by using
+splhigh. This is necessary to ensure operations are fully completed
+ without interruption.
+
+5. It removes the thread from the list of sleepers and then calls
+make runnable on that thread. A sleeping thread can run again
+if thread_wakeup is called with the same ADDR value as the sleeping thread.
+The thread gets to run again after the mi_switch is called.
+
+6. struct thread * scheduler(void)
+
+7. It uses a round robin run queue and pops the next thread from the front of the queue.
+If th queue is empty it calls cpu_idle() if there is nothing on the q.
+
+8.The hardware timer calls hardclock(). Hardclock is called HZ times 
+a second by the timer.
+
+9. Thread sleep is used in the p function and thread wakeup is used in the 
+v function as expected. Once thread sleep is called, the thread is suspended
+until the semaphore count is greaer than 0. In V, the thread is woken up
+if the semaphore count is greater than 0.i
+
+10. To ensure locks are released by their own holder, and to keep the holder
+of locks anonymous.
+

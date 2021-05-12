@@ -1,0 +1,427 @@
+Script started on Mon 18 Jan 2021 09:10:27 PM CST
+[?1034hbash-4.2$ ls
+commands.script  git.script	 lspci.txt    simple
+cpuinfo.txt	 interrupts.txt  meminfo.txt  simple.c
+bash-4.2$ pwd
+/home/u1/cob0013/COMP3500/project-1
+bash-4.2$ [H[2Jbash-4.2$ git init
+Initialized empty Git repository in /home/u1/cob0013/COMP3500/project-1/.git/
+bash-4.2$ touch cpu.c
+bash-4.2$ touch driver.c
+bash-4.2$ touch file.c
+bash-4.2$ git status
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gdbinit
+#	commands.script
+#	cpu.c
+#	cpuinfo.txt
+#	driver.c
+#	file.c
+#	git.script
+#	interrupts.txt
+#	lspci.txt
+#	meminfo.txt
+#	simple
+#	simple.c
+nothing added to commit but untracked files present (use "git add" to track)
+bash-4.2$ [H[2Jbash-4.2$ git add *.c
+bash-4.2$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	new file:   cpu.c
+#	new file:   driver.c
+#	new file:   file.c
+#	new file:   simple.c
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gdbinit
+#	commands.script
+#	cpuinfo.txt
+#	git.script
+#	interrupts.txt
+#	lspci.txt
+#	meminfo.txt
+#	simple
+bash-4.2$ [H[2Jbash-4.2$ git commit -m 'Initial pj[Kroject 1'
+[master (root-commit) de5ddbc] Initial project 1
+ Committer: Carson O Barnett <cob0013@tux239.eng.auburn.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 4 files changed, 14 insertions(+)
+ create mode 100644 cpu.c
+ create mode 100644 driver.c
+ create mode 100644 file.c
+ create mode 100644 simple.c
+bash-4.2$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gdbinit
+#	commands.script
+#	cpuinfo.txt
+#	git.script
+#	interrupts.txt
+#	lspci.txt
+#	meminfo.txt
+#	simple
+nothing added to commit but untracked files present (use "git add" to track)
+bash-4.2$ [H[2Jbash-4.2$ rm cpu.c
+bash-4.2$ ls
+commands.script  driver.c  git.script	   lspci.txt	simple
+cpuinfo.txt	 file.c    interrupts.txt  meminfo.txt	simple.c
+bash-4.2$ git cha[Keckout cpuinfo.txt [K[K[K[K[K[K[K[K[K.c
+bash-4.2$ git checkout -b master2
+Switched to a new branch 'master2'
+bash-4.2$ touch cpu2.c
+bash-4.2$ ls
+commands.script  cpu.c	      driver.c	git.script	lspci.txt    simple
+cpu2.c		 cpuinfo.txt  file.c	interrupts.txt	meminfo.txt  simple.c
+bash-4.2$ git [K[K[K[Kgit add cpu2.c
+bash-4.2$ c[Kgit commit -m "cpu 2[K[K2 is added into master 2"
+[master2 0e3c2fc] cpu2 is added into master 2
+ Committer: Carson O Barnett <cob0013@tux239.eng.auburn.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 cpu2.c
+bash-4.2$ [H[2Jbash-4.2$ git branch
+  master
+* master2
+bash-4.2$ ls
+commands.script  cpu.c	      driver.c	git.script	lspci.txt    simple
+cpu2.c		 cpuinfo.txt  file.c	interrupts.txt	meminfo.txt  simple.c
+bash-4.2$ git checkout master
+Switched to branch 'master'
+bash-4.2$ ls
+commands.script  cpuinfo.txt  file.c	  interrupts.txt  meminfo.txt  simple.c
+cpu.c		 driver.c     git.script  lspci.txt	  simple
+bash-4.2$ git clone -b master . ../new_project1
+Cloning into '../new_project1'...
+done.
+bash-4.2$ cd ..
+bash-4.2$ ls
+new_project1  project-1
+bash-4.2$ cd new_project1/
+bash-4.2$ ls[K[Kls
+cpu.c  driver.c  file.c  simple.c
+bash-4.2$ cd ..
+bash-4.2$ ls
+new_project1  project-1
+bash-4.2$ git clone https://github.com/libgit2/libgit2 mylibgit [K
+Cloning into 'mylibgit'...
+remote: Enumerating objects: 107274, done.[K
+remote: Counting objects:   0% (1/107274)[Kremote: Counting objects:   1% (1073/107274)[Kremote: Counting objects:   2% (2146/107274)[Kremote: Counting objects:   3% (3219/107274)[Kremote: Counting objects:   4% (4291/107274)[Kremote: Counting objects:   5% (5364/107274)[Kremote: Counting objects:   6% (6437/107274)[Kremote: Counting objects:   7% (7510/107274)[Kremote: Counting objects:   8% (8582/107274)[Kremote: Counting objects:   9% (9655/107274)[Kremote: Counting objects:  10% (10728/107274)[Kremote: Counting objects:  11% (11801/107274)[Kremote: Counting objects:  12% (12873/107274)[Kremote: Counting objects:  13% (13946/107274)[Kremote: Counting objects:  14% (15019/107274)[Kremote: Counting objects:  15% (16092/107274)[Kremote: Counting objects:  16% (17164/107274)[Kremote: Counting objects:  17% (18237/107274)[Kremote: Counting objects:  18% (19310/107274)[Kremote: Counting objects:  19% (20383/107274)[Kremote: Counting objects:  20% (21455/107274)[Kremote: Counting objects:  21% (22528/107274)[Kremote: Counting objects:  22% (23601/107274)[Kremote: Counting objects:  23% (24674/107274)[Kremote: Counting objects:  24% (25746/107274)[Kremote: Counting objects:  25% (26819/107274)[Kremote: Counting objects:  26% (27892/107274)[Kremote: Counting objects:  27% (28964/107274)[Kremote: Counting objects:  28% (30037/107274)[Kremote: Counting objects:  29% (31110/107274)[Kremote: Counting objects:  30% (32183/107274)[Kremote: Counting objects:  31% (33255/107274)[Kremote: Counting objects:  32% (34328/107274)[Kremote: Counting objects:  33% (35401/107274)[Kremote: Counting objects:  34% (36474/107274)[Kremote: Counting objects:  35% (37546/107274)[Kremote: Counting objects:  36% (38619/107274)[Kremote: Counting objects:  37% (39692/107274)[Kremote: Counting objects:  38% (40765/107274)[Kremote: Counting objects:  39% (41837/107274)[Kremote: Counting objects:  40% (42910/107274)[Kremote: Counting objects:  41% (43983/107274)[Kremote: Counting objects:  42% (45056/107274)[Kremote: Counting objects:  43% (46128/107274)[Kremote: Counting objects:  44% (47201/107274)[Kremote: Counting objects:  45% (48274/107274)[Kremote: Counting objects:  46% (49347/107274)[Kremote: Counting objects:  47% (50419/107274)[Kremote: Counting objects:  48% (51492/107274)[Kremote: Counting objects:  49% (52565/107274)[Kremote: Counting objects:  50% (53637/107274)[Kremote: Counting objects:  51% (54710/107274)[Kremote: Counting objects:  52% (55783/107274)[Kremote: Counting objects:  53% (56856/107274)[Kremote: Counting objects:  54% (57928/107274)[Kremote: Counting objects:  55% (59001/107274)[Kremote: Counting objects:  56% (60074/107274)[Kremote: Counting objects:  57% (61147/107274)[Kremote: Counting objects:  58% (62219/107274)[Kremote: Counting objects:  59% (63292/107274)[Kremote: Counting objects:  60% (64365/107274)[Kremote: Counting objects:  61% (65438/107274)[Kremote: Counting objects:  62% (66510/107274)[Kremote: Counting objects:  63% (67583/107274)[Kremote: Counting objects:  64% (68656/107274)[Kremote: Counting objects:  65% (69729/107274)[Kremote: Counting objects:  66% (70801/107274)[Kremote: Counting objects:  67% (71874/107274)[Kremote: Counting objects:  68% (72947/107274)[Kremote: Counting objects:  69% (74020/107274)[Kremote: Counting objects:  70% (75092/107274)[Kremote: Counting objects:  71% (76165/107274)[Kremote: Counting objects:  72% (77238/107274)[Kremote: Counting objects:  73% (78311/107274)[Kremote: Counting objects:  74% (79383/107274)[Kremote: Counting objects:  75% (80456/107274)[Kremote: Counting objects:  76% (81529/107274)[Kremote: Counting objects:  77% (82601/107274)[Kremote: Counting objects:  78% (83674/107274)[Kremote: Counting objects:  79% (84747/107274)[Kremote: Counting objects:  80% (85820/107274)[Kremote: Counting objects:  81% (86892/107274)[Kremote: Counting objects:  82% (87965/107274)[Kremote: Counting objects:  83% (89038/107274)[Kremote: Counting objects:  84% (90111/107274)[Kremote: Counting objects:  85% (91183/107274)[Kremote: Counting objects:  86% (92256/107274)[Kremote: Counting objects:  87% (93329/107274)[Kremote: Counting objects:  88% (94402/107274)[Kremote: Counting objects:  89% (95474/107274)[Kremote: Counting objects:  90% (96547/107274)[Kremote: Counting objects:  91% (97620/107274)[Kremote: Counting objects:  92% (98693/107274)[Kremote: Counting objects:  93% (99765/107274)[Kremote: Counting objects:  94% (100838/107274)[Kremote: Counting objects:  95% (101911/107274)[Kremote: Counting objects:  96% (102984/107274)[Kremote: Counting objects:  97% (104056/107274)[Kremote: Counting objects:  98% (105129/107274)[Kremote: Counting objects:  99% (106202/107274)[Kremote: Counting objects: 100% (107274/107274)[Kremote: Counting objects: 100% (107274/107274), done.[K
+remote: Compressing objects:   0% (1/29505)[Kremote: Compressing objects:   1% (296/29505)[Kremote: Compressing objects:   2% (591/29505)[Kremote: Compressing objects:   3% (886/29505)[Kremote: Compressing objects:   4% (1181/29505)[Kremote: Compressing objects:   5% (1476/29505)[Kremote: Compressing objects:   6% (1771/29505)[Kremote: Compressing objects:   7% (2066/29505)[Kremote: Compressing objects:   8% (2361/29505)[Kremote: Compressing objects:   9% (2656/29505)[Kremote: Compressing objects:  10% (2951/29505)[Kremote: Compressing objects:  11% (3246/29505)[Kremote: Compressing objects:  12% (3541/29505)[Kremote: Compressing objects:  13% (3836/29505)[Kremote: Compressing objects:  14% (4131/29505)[Kremote: Compressing objects:  15% (4426/29505)[Kremote: Compressing objects:  16% (4721/29505)[Kremote: Compressing objects:  17% (5016/29505)[Kremote: Compressing objects:  18% (5311/29505)[Kremote: Compressing objects:  19% (5606/29505)[Kremote: Compressing objects:  20% (5901/29505)[Kremote: Compressing objects:  21% (6197/29505)[Kremote: Compressing objects:  22% (6492/29505)[Kremote: Compressing objects:  23% (6787/29505)[Kremote: Compressing objects:  24% (7082/29505)[Kremote: Compressing objects:  25% (7377/29505)[Kremote: Compressing objects:  26% (7672/29505)[Kremote: Compressing objects:  27% (7967/29505)[Kremote: Compressing objects:  28% (8262/29505)[Kremote: Compressing objects:  29% (8557/29505)[Kremote: Compressing objects:  30% (8852/29505)[Kremote: Compressing objects:  31% (9147/29505)[Kremote: Compressing objects:  32% (9442/29505)[Kremote: Compressing objects:  33% (9737/29505)[Kremote: Compressing objects:  34% (10032/29505)[Kremote: Compressing objects:  35% (10327/29505)[Kremote: Compressing objects:  36% (10622/29505)[Kremote: Compressing objects:  37% (10917/29505)[Kremote: Compressing objects:  38% (11212/29505)[Kremote: Compressing objects:  39% (11507/29505)[Kremote: Compressing objects:  40% (11802/29505)[Kremote: Compressing objects:  41% (12098/29505)[Kremote: Compressing objects:  42% (12393/29505)[Kremote: Compressing objects:  43% (12688/29505)[Kremote: Compressing objects:  44% (12983/29505)[Kremote: Compressing objects:  45% (13278/29505)[Kremote: Compressing objects:  46% (13573/29505)[Kremote: Compressing objects:  47% (13868/29505)[Kremote: Compressing objects:  48% (14163/29505)[Kremote: Compressing objects:  49% (14458/29505)[Kremote: Compressing objects:  50% (14753/29505)[Kremote: Compressing objects:  51% (15048/29505)[Kremote: Compressing objects:  52% (15343/29505)[Kremote: Compressing objects:  53% (15638/29505)[Kremote: Compressing objects:  54% (15933/29505)[Kremote: Compressing objects:  55% (16228/29505)[Kremote: Compressing objects:  56% (16523/29505)[Kremote: Compressing objects:  57% (16818/29505)[Kremote: Compressing objects:  58% (17113/29505)[Kremote: Compressing objects:  59% (17408/29505)[Kremote: Compressing objects:  60% (17703/29505)[Kremote: Compressing objects:  61% (17999/29505)[Kremote: Compressing objects:  62% (18294/29505)[Kremote: Compressing objects:  63% (18589/29505)[Kremote: Compressing objects:  64% (18884/29505)[Kremote: Compressing objects:  65% (19179/29505)[Kremote: Compressing objects:  66% (19474/29505)[Kremote: Compressing objects:  67% (19769/29505)[Kremote: Compressing objects:  68% (20064/29505)[Kremote: Compressing objects:  69% (20359/29505)[Kremote: Compressing objects:  70% (20654/29505)[Kremote: Compressing objects:  71% (20949/29505)[Kremote: Compressing objects:  72% (21244/29505)[Kremote: Compressing objects:  73% (21539/29505)[Kremote: Compressing objects:  74% (21834/29505)[Kremote: Compressing objects:  75% (22129/29505)[Kremote: Compressing objects:  76% (22424/29505)[Kremote: Compressing objects:  77% (22719/29505)[Kremote: Compressing objects:  78% (23014/29505)[Kremote: Compressing objects:  79% (23309/29505)[Kremote: Compressing objects:  80% (23604/29505)[Kremote: Compressing objects:  81% (23900/29505)[Kremote: Compressing objects:  82% (24195/29505)[Kremote: Compressing objects:  83% (24490/29505)[Kremote: Compressing objects:  84% (24785/29505)[Kremote: Compressing objects:  85% (25080/29505)[Kremote: Compressing objects:  86% (25375/29505)[Kremote: Compressing objects:  87% (25670/29505)[Kremote: Compressing objects:  88% (25965/29505)[Kremote: Compressing objects:  89% (26260/29505)[Kremote: Compressing objects:  90% (26555/29505)[Kremote: Compressing objects:  91% (26850/29505)[Kremote: Compressing objects:  92% (27145/29505)[Kremote: Compressing objects:  93% (27440/29505)[Kremote: Compressing objects:  94% (27735/29505)[Kremote: Compressing objects:  95% (28030/29505)[Kremote: Compressing objects:  96% (28325/29505)[Kremote: Compressing objects:  97% (28620/29505)[Kremote: Compressing objects:  98% (28915/29505)[Kremote: Compressing objects:  99% (29210/29505)[Kremote: Compressing objects: 100% (29505/29505)[Kremote: Compressing objects: 100% (29505/29505), done.[K
+Receiving objects:   0% (1/107274)   Receiving objects:   1% (1073/107274)   Receiving objects:   2% (2146/107274)   Receiving objects:   3% (3219/107274)   Receiving objects:   4% (4291/107274)   Receiving objects:   5% (5364/107274)   Receiving objects:   6% (6437/107274)   Receiving objects:   7% (7510/107274)   Receiving objects:   8% (8582/107274)   Receiving objects:   9% (9655/107274)   Receiving objects:  10% (10728/107274)   Receiving objects:  11% (11801/107274)   Receiving objects:  12% (12873/107274)   Receiving objects:  13% (13946/107274)   Receiving objects:  14% (15019/107274), 4.09 MiB | 8.16 MiB/s   Receiving objects:  15% (16092/107274), 4.09 MiB | 8.16 MiB/s   Receiving objects:  16% (17164/107274), 4.09 MiB | 8.16 MiB/s   Receiving objects:  17% (18237/107274), 4.09 MiB | 8.16 MiB/s   Receiving objects:  18% (19310/107274), 4.09 MiB | 8.16 MiB/s   Receiving objects:  19% (20383/107274), 4.09 MiB | 8.16 MiB/s   Receiving objects:  20% (21455/107274), 4.09 MiB | 8.16 MiB/s   Receiving objects:  21% (22528/107274), 4.09 MiB | 8.16 MiB/s   Receiving objects:  22% (23601/107274), 4.09 MiB | 8.16 MiB/s   Receiving objects:  23% (24674/107274), 4.09 MiB | 8.16 MiB/s   Receiving objects:  24% (25746/107274), 4.09 MiB | 8.16 MiB/s   Receiving objects:  24% (26800/107274), 4.09 MiB | 8.16 MiB/s   Receiving objects:  25% (26819/107274), 12.36 MiB | 12.33 MiB/s   Receiving objects:  26% (27892/107274), 12.36 MiB | 12.33 MiB/s   Receiving objects:  27% (28964/107274), 12.36 MiB | 12.33 MiB/s   Receiving objects:  28% (30037/107274), 12.36 MiB | 12.33 MiB/s   Receiving objects:  29% (31110/107274), 12.36 MiB | 12.33 MiB/s   Receiving objects:  30% (32183/107274), 12.36 MiB | 12.33 MiB/s   Receiving objects:  31% (33255/107274), 12.36 MiB | 12.33 MiB/s   Receiving objects:  32% (34328/107274), 12.36 MiB | 12.33 MiB/s   Receiving objects:  33% (35401/107274), 12.36 MiB | 12.33 MiB/s   Receiving objects:  34% (36474/107274), 12.36 MiB | 12.33 MiB/s   Receiving objects:  35% (37546/107274), 12.36 MiB | 12.33 MiB/s   Receiving objects:  36% (38619/107274), 12.36 MiB | 12.33 MiB/s   Receiving objects:  37% (39692/107274), 21.73 MiB | 14.46 MiB/s   Receiving objects:  38% (40765/107274), 21.73 MiB | 14.46 MiB/s   Receiving objects:  39% (41837/107274), 21.73 MiB | 14.46 MiB/s   Receiving objects:  40% (42910/107274), 21.73 MiB | 14.46 MiB/s   Receiving objects:  41% (43983/107274), 21.73 MiB | 14.46 MiB/s   Receiving objects:  42% (45056/107274), 21.73 MiB | 14.46 MiB/s   Receiving objects:  43% (46128/107274), 21.73 MiB | 14.46 MiB/s   Receiving objects:  44% (47201/107274), 21.73 MiB | 14.46 MiB/s   Receiving objects:  45% (48274/107274), 21.73 MiB | 14.46 MiB/s   Receiving objects:  46% (49347/107274), 21.73 MiB | 14.46 MiB/s   Receiving objects:  47% (50419/107274), 21.73 MiB | 14.46 MiB/s   Receiving objects:  48% (51492/107274), 21.73 MiB | 14.46 MiB/s   Receiving objects:  49% (52565/107274), 21.73 MiB | 14.46 MiB/s   Receiving objects:  50% (53637/107274), 21.73 MiB | 14.46 MiB/s   Receiving objects:  51% (54710/107274), 21.73 MiB | 14.46 MiB/s   Receiving objects:  52% (55783/107274), 21.73 MiB | 14.46 MiB/s   Receiving objects:  52% (56813/107274), 21.73 MiB | 14.46 MiB/s   Receiving objects:  53% (56856/107274), 21.73 MiB | 14.46 MiB/s   Receiving objects:  54% (57928/107274), 31.25 MiB | 15.59 MiB/s   Receiving objects:  55% (59001/107274), 31.25 MiB | 15.59 MiB/s   Receiving objects:  56% (60074/107274), 31.25 MiB | 15.59 MiB/s   Receiving objects:  57% (61147/107274), 31.25 MiB | 15.59 MiB/s   Receiving objects:  58% (62219/107274), 31.25 MiB | 15.59 MiB/s   Receiving objects:  59% (63292/107274), 31.25 MiB | 15.59 MiB/s   Receiving objects:  60% (64365/107274), 31.25 MiB | 15.59 MiB/s   Receiving objects:  61% (65438/107274), 31.25 MiB | 15.59 MiB/s   Receiving objects:  62% (66510/107274), 31.25 MiB | 15.59 MiB/s   Receiving objects:  63% (67583/107274), 31.25 MiB | 15.59 MiB/s   Receiving objects:  64% (68656/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  65% (69729/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  66% (70801/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  67% (71874/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  68% (72947/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  69% (74020/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  70% (75092/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  71% (76165/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  72% (77238/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  73% (78311/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  74% (79383/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  75% (80456/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  76% (81529/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  77% (82601/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  78% (83674/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  79% (84747/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  80% (85820/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  81% (86892/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  82% (87965/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  83% (89038/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  84% (90111/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  85% (91183/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  86% (92256/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  87% (93329/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  88% (94402/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  89% (95474/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  90% (96547/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  91% (97620/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  92% (98693/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  93% (99765/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  93% (100496/107274), 42.04 MiB | 16.78 MiB/s   Receiving objects:  94% (100838/107274), 52.09 MiB | 17.33 MiB/s   Receiving objects:  95% (101911/107274), 52.09 MiB | 17.33 MiB/s   Receiving objects:  96% (102984/107274), 52.09 MiB | 17.33 MiB/s   Receiving objects:  97% (104056/107274), 52.09 MiB | 17.33 MiB/s   Receiving objects:  98% (105129/107274), 52.09 MiB | 17.33 MiB/s   Receiving objects:  99% (106202/107274), 52.09 MiB | 17.33 MiB/s   remote: Total 107274 (delta 75860), reused 107250 (delta 75842), pack-reused 0[K
+Receiving objects: 100% (107274/107274), 52.09 MiB | 17.33 MiB/s   Receiving objects: 100% (107274/107274), 53.97 MiB | 17.33 MiB/s, done.
+Resolving deltas:   0% (0/75860)   Resolving deltas:   1% (998/75860)   Resolving deltas:   2% (1537/75860)   Resolving deltas:   3% (2425/75860)   Resolving deltas:   4% (3066/75860)   Resolving deltas:   5% (4030/75860)   Resolving deltas:   6% (4580/75860)   Resolving deltas:   7% (5340/75860)   Resolving deltas:   8% (6070/75860)   Resolving deltas:   9% (6869/75860)   Resolving deltas:  10% (7757/75860)   Resolving deltas:  11% (8391/75860)   Resolving deltas:  12% (9124/75860)   Resolving deltas:  13% (9974/75860)   Resolving deltas:  14% (10631/75860)   Resolving deltas:  15% (11380/75860)   Resolving deltas:  16% (12142/75860)   Resolving deltas:  17% (12904/75860)   Resolving deltas:  18% (13655/75860)   Resolving deltas:  19% (14577/75860)   Resolving deltas:  20% (15280/75860)   Resolving deltas:  21% (15934/75860)   Resolving deltas:  22% (16698/75860)   Resolving deltas:  23% (17919/75860)   Resolving deltas:  24% (18286/75860)   Resolving deltas:  25% (18966/75860)   Resolving deltas:  26% (19769/75860)   Resolving deltas:  27% (20626/75860)   Resolving deltas:  28% (21262/75860)   Resolving deltas:  29% (22009/75860)   Resolving deltas:  30% (22791/75860)   Resolving deltas:  31% (23517/75860)   Resolving deltas:  32% (24332/75860)   Resolving deltas:  33% (25179/75860)   Resolving deltas:  34% (25802/75860)   Resolving deltas:  35% (26601/75860)   Resolving deltas:  36% (27400/75860)   Resolving deltas:  37% (28172/75860)   Resolving deltas:  38% (29125/75860)   Resolving deltas:  39% (29586/75860)   Resolving deltas:  40% (30344/75860)   Resolving deltas:  41% (31155/75860)   Resolving deltas:  42% (31869/75860)   Resolving deltas:  43% (32622/75860)   Resolving deltas:  44% (33528/75860)   Resolving deltas:  45% (34272/75860)   Resolving deltas:  46% (34915/75860)   Resolving deltas:  47% (35748/75860)   Resolving deltas:  48% (36831/75860)   Resolving deltas:  49% (37298/75860)   Resolving deltas:  50% (38083/75860)   Resolving deltas:  51% (38694/75860)   Resolving deltas:  52% (39960/75860)   Resolving deltas:  53% (40361/75860)   Resolving deltas:  54% (41246/75860)   Resolving deltas:  55% (41830/75860)   Resolving deltas:  56% (42654/75860)   Resolving deltas:  57% (43279/75860)   Resolving deltas:  58% (44085/75860)   Resolving deltas:  59% (44767/75860)   Resolving deltas:  60% (45531/75860)   Resolving deltas:  61% (46304/75860)   Resolving deltas:  62% (47035/75860)   Resolving deltas:  63% (47810/75860)   Resolving deltas:  64% (48557/75860)   Resolving deltas:  65% (49340/75860)   Resolving deltas:  66% (50076/75860)   Resolving deltas:  67% (50828/75860)   Resolving deltas:  68% (51589/75860)   Resolving deltas:  69% (52352/75860)   Resolving deltas:  70% (53113/75860)   Resolving deltas:  71% (53863/75860)   Resolving deltas:  72% (54623/75860)   Resolving deltas:  73% (55453/75860)   Resolving deltas:  74% (56528/75860)   Resolving deltas:  75% (56963/75860)   Resolving deltas:  76% (57671/75860)   Resolving deltas:  76% (57787/75860)   Resolving deltas:  77% (58427/75860)   Resolving deltas:  78% (59186/75860)   Resolving deltas:  79% (59978/75860)   Resolving deltas:  80% (60691/75860)   Resolving deltas:  81% (61447/75860)   Resolving deltas:  82% (62234/75860)   Resolving deltas:  83% (63065/75860)   Resolving deltas:  84% (63737/75860)   Resolving deltas:  85% (64496/75860)   Resolving deltas:  86% (65254/75860)   Resolving deltas:  87% (66014/75860)   Resolving deltas:  88% (66822/75860)   Resolving deltas:  89% (67517/75860)   Resolving deltas:  90% (68282/75860)   Resolving deltas:  91% (69082/75860)   Resolving deltas:  92% (69800/75860)   Resolving deltas:  93% (70568/75860)   Resolving deltas:  94% (71318/75860)   Resolving deltas:  95% (72067/75860)   Resolving deltas:  96% (72847/75860)   Resolving deltas:  97% (73618/75860)   Resolving deltas:  98% (74398/75860)   Resolving deltas:  99% (75132/75860)   Resolving deltas: 100% (75860/75860)   Resolving deltas: 100% (75860/75860), done.
+Checking out files:   2% (303/10825)   Checking out files:   3% (325/10825)   Checking out files:   4% (433/10825)   Checking out files:   5% (542/10825)   Checking out files:   5% (646/10825)   Checking out files:   6% (650/10825)   Checking out files:   7% (758/10825)   Checking out files:   8% (866/10825)   Checking out files:   9% (975/10825)   Checking out files:   9% (981/10825)   Checking out files:  10% (1083/10825)   Checking out files:  11% (1191/10825)   Checking out files:  11% (1242/10825)   Checking out files:  12% (1299/10825)   Checking out files:  13% (1408/10825)   Checking out files:  14% (1516/10825)   Checking out files:  14% (1530/10825)   Checking out files:  15% (1624/10825)   Checking out files:  16% (1732/10825)   Checking out files:  16% (1804/10825)   Checking out files:  17% (1841/10825)   Checking out files:  18% (1949/10825)   Checking out files:  18% (2027/10825)   Checking out files:  19% (2057/10825)   Checking out files:  20% (2165/10825)   Checking out files:  20% (2239/10825)   Checking out files:  21% (2274/10825)   Checking out files:  22% (2382/10825)   Checking out files:  23% (2490/10825)   Checking out files:  23% (2588/10825)   Checking out files:  24% (2598/10825)   Checking out files:  25% (2707/10825)   Checking out files:  26% (2815/10825)   Checking out files:  27% (2923/10825)   Checking out files:  27% (2949/10825)   Checking out files:  28% (3031/10825)   Checking out files:  29% (3140/10825)   Checking out files:  30% (3248/10825)   Checking out files:  30% (3303/10825)   Checking out files:  31% (3356/10825)   Checking out files:  32% (3464/10825)   Checking out files:  33% (3573/10825)   Checking out files:  33% (3661/10825)   Checking out files:  34% (3681/10825)   Checking out files:  35% (3789/10825)   Checking out files:  36% (3897/10825)   Checking out files:  36% (3981/10825)   Checking out files:  37% (4006/10825)   Checking out files:  38% (4114/10825)   Checking out files:  39% (4222/10825)   Checking out files:  39% (4319/10825)   Checking out files:  40% (4330/10825)   Checking out files:  41% (4439/10825)   Checking out files:  42% (4547/10825)   Checking out files:  42% (4641/10825)   Checking out files:  43% (4655/10825)   Checking out files:  44% (4763/10825)   Checking out files:  45% (4872/10825)   Checking out files:  46% (4980/10825)   Checking out files:  46% (4982/10825)   Checking out files:  47% (5088/10825)   Checking out files:  48% (5196/10825)   Checking out files:  48% (5304/10825)   Checking out files:  49% (5305/10825)   Checking out files:  50% (5413/10825)   Checking out files:  51% (5521/10825)   Checking out files:  52% (5629/10825)   Checking out files:  52% (5636/10825)   Checking out files:  53% (5738/10825)   Checking out files:  54% (5846/10825)   Checking out files:  54% (5898/10825)   Checking out files:  55% (5954/10825)   Checking out files:  56% (6062/10825)   Checking out files:  57% (6171/10825)   Checking out files:  57% (6251/10825)   Checking out files:  58% (6279/10825)   Checking out files:  59% (6387/10825)   Checking out files:  60% (6495/10825)   Checking out files:  60% (6598/10825)   Checking out files:  61% (6604/10825)   Checking out files:  62% (6712/10825)   Checking out files:  63% (6820/10825)   Checking out files:  64% (6928/10825)   Checking out files:  64% (6953/10825)   Checking out files:  65% (7037/10825)   Checking out files:  66% (7145/10825)   Checking out files:  67% (7253/10825)   Checking out files:  67% (7311/10825)   Checking out files:  68% (7361/10825)   Checking out files:  69% (7470/10825)   Checking out files:  70% (7578/10825)   Checking out files:  70% (7641/10825)   Checking out files:  71% (7686/10825)   Checking out files:  72% (7794/10825)   Checking out files:  72% (7901/10825)   Checking out files:  73% (7903/10825)   Checking out files:  74% (8011/10825)   Checking out files:  74% (8118/10825)   Checking out files:  75% (8119/10825)   Checking out files:  76% (8227/10825)   Checking out files:  77% (8336/10825)   Checking out files:  77% (8345/10825)   Checking out files:  78% (8444/10825)   Checking out files:  79% (8552/10825)   Checking out files:  79% (8601/10825)   Checking out files:  80% (8660/10825)   Checking out files:  81% (8769/10825)   Checking out files:  81% (8829/10825)   Checking out files:  82% (8877/10825)   Checking out files:  83% (8985/10825)   Checking out files:  83% (9046/10825)   Checking out files:  84% (9093/10825)   Checking out files:  85% (9202/10825)   Checking out files:  85% (9273/10825)   Checking out files:  86% (9310/10825)   Checking out files:  87% (9418/10825)   Checking out files:  87% (9508/10825)   Checking out files:  88% (9526/10825)   Checking out files:  89% (9635/10825)   Checking out files:  89% (9718/10825)   Checking out files:  90% (9743/10825)   Checking out files:  91% (9851/10825)   Checking out files:  91% (9899/10825)   Checking out files:  92% (9959/10825)   Checking out files:  93% (10068/10825)   Checking out files:  93% (10097/10825)   Checking out files:  94% (10176/10825)   Checking out files:  95% (10284/10825)   Checking out files:  95% (10305/10825)   Checking out files:  96% (10392/10825)   Checking out files:  97% (10501/10825)   Checking out files:  97% (10520/10825)   Checking out files:  98% (10609/10825)   Checking out files:  99% (10717/10825)   Checking out files:  99% (10719/10825)   Checking out files: 100% (10825/10825)   Checking out files: 100% (10825/10825), done.
+bash-4.2$ [H[2Jbash-4.2$ ls
+mylibgit  new_project1	project-1
+bash-4.2$ cd new[K[K[K[K[K[Kgit status
+fatal: Not a git repository (or any parent up to mount point /home/u1)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+bash-4.2$ g[Kcd new_project1/
+bash-4.2$ git staut[K[Ktus
+# On branch master
+nothing to commit, working directory clean
+bash-4.2$ cd ..
+bash-4.2$ cd mylibgit/
+bash-4.2$ git status
+# On branch main
+#
+# It took 2.81 seconds to enumerate untracked files. 'status -uno'
+# may speed it up, but you have to be careful not to forget to add
+# new files yourself (see 'git help status').
+nothing to commit, working directory clean
+bash-4.2$ cd ..
+bash-4.2$ cd project-1/
+bash-4.2$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gdbinit
+#	commands.script
+#	cpuinfo.txt
+#	git.script
+#	interrupts.txt
+#	lspci.txt
+#	meminfo.txt
+#	simple
+nothing added to commit but untracked files present (use "git add" to track)
+bash-4.2$ [H[2Jbash-4.2$ git[K[K[Kgit add README
+fatal: pathspec 'README' did not match any files
+bash-4.2$ cd ..
+bash-4.2$ ls
+mylibgit  new_project1	project-1
+bash-4.2$ cd mylibgit/
+bash-4.2$ ls
+api.docurium  CMakeLists.txt  examples	       package.json  src
+AUTHORS       COPYING	      fuzzers	       README.md     tests
+ci	      deps	      git.git-authors  script
+cmake	      docs	      include	       SECURITY.md
+bash-4.2$ cd [K[K[Kgit add README
+fatal: pathspec 'README' did not match any files
+bash-4.2$ vim README.md 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"README.md" 429L, 16558C[>c[27m[m[H[2J[1;1H[38;5;225mlibgit2 - the Git linkable library[m
+[38;5;81m==================================[m
+
+| Build Status | |
+| ------------ | - |
+| [7m**[m[1mmaster[m[7m**[m branch CI builds | [![[4m[38;5;81mCI Build[m]([95mhttps://github.com/libgit2/libgit2//[7;1Hworkflows/CI%20Build/badge.svg?event=push[m)](https://github.com/libgit2/libgit2/aa[8;1Hctions?query=workflow%3A%22CI+Build%22+event%3Apush) |
+| [7m**[m[1mv1.1 branch[m[7m**[m CI builds | [![[4m[38;5;81mCI Build[m]([95mhttps://github.com/libgit2/libgit2/woo[10;1Hrkflows/CI%20Build/badge.svg?branch=maint%2Fv1.1&event=push[m)](https://github.comm[11;1H/libgit2/libgit2/actions?query=workflow%3A%22CI+Build%22+event%3Apush+branch%3Amm[12;1Haint%2Fv1.1) |
+| [7m**[m[1mv1.0 branch[m[7m**[m CI builds | [![[4m[38;5;81mAzure Pipelines Build Status[m]([95mhttps://dev.azuree[14;1H.com/libgit2/libgit2/_apis/build/status/libgit2?branchName=maint/v1.0[m)](https:///[15;1Hdev.azure.com/libgit2/libgit2/[7m_build/latest?definitionId=7&branchName=maint/v1.00[16;1H) |
+| **Nightly** builds | [![Nightly Build](https://github.com/libgit2/libgit2/workk[18;1Hflows/Nightly%20Build/badge.svg)](https://github.com/libgit2/libgit2/actions?quee[19;1Hry=workflow%3A%22Nightly+Build%22) [![Coverity Scan Status](https://scan.coveritt[20;1Hy.com/projects/639/badge.svg)](https://scan.coverity.com/projects/639) |
+
+`libgit2` is a portable, pure C implementation of the Git core methods
+provided as a linkable library with a solid API, allowing to build Git
+functionality into your application.  Language bindings like[m[25;63H1,1[11CTop"README.md" 429L, 16558C[38C   [11C   [1;1H[?12l[?25h[?25l[25;63H2,1[11CTop[2;1H[?12l[?25h[?25l[25;63H3,0-1[3;1H[?12l[?25h[?25l[25;63H4,1  [4;1H[?12l[?25h[?25l[25;63H5[5;1H[?12l[?25h[?25l[25;63H6[6;1H[?12l[?25h[?25l[25;63H7[9;1H[?12l[?25h[?25l[25;63H8[13;1H[?12l[?25h[?25l[25;63H9[17;1H[?12l[?25h[?25l[25;63H10,0-1[21;1H[?12l[?25h[?25l[25;64H1,1  [22;1H[?12l[?25h[?25l[25;64H2[23;1H[?12l[?25h[?25l[25;64H3[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[24;1H[7m[46m[[m[7mRugged[m[7m[46m][m[7m(https://github.com/libgit2/rugged) (Ruby),[m[25;1H[K[25;63H14,1[11C0%[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[23;1H[7m[Rugged][m
+[7m[46m[[m[7mLibGit2Sharp[m[7m[46m][m[7m(https://github.com/libgit2/libgit2sharp) (.NET),[m[25;63H[K[25;63H15,1[11C0%[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[23;1H[7m[[12C][m
+[7m[46m[[m[7mpygit2[m[7m[46m][m[7m(http://www.pygit2.org/) (Python) and[m[25;63H[K[25;63H16,1[11C0%[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[23;1H[7m[pygit2][m
+[7m[46m[[m[7mNodeGit[m[7m[46m][m[7m(http://nodegit.org) (Node) allow you to build Git tooling[m[25;63H[K[25;63H17,1[11C0%[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[23;1H[7m[[7C]
+in your favorite language.[m[25;63H[K[25;63H18,1[11C1%[24;1H[?12l[?25h[?25l[1;24r[1;1H[3M[1;25r[23;1H[7m`libgit2` is used to power Git GUI clients like
+[GitKraken](https://gitkraken.com/) and [gmaster](https://gmaster.io/)[m[25;63H[K[25;63H19,0-1[9C1%[22;1H[?12l[?25h[?25l[25;63H20,1  [23;1H[?12l[?25h[?25l
+[7m[46m[[9C][m[25;64H1[24;1H[?12l[?25h[?25l[1;24r[1;1H[4M[1;25r[20;1H[7m[[9C]
+and on Git hosting providers like [GitHub](https://github.com/),
+[GitLab](https://gitlab.com/) and
+[Azure DevOps](https://azure.com/devops).
+We perform the merge every time you click "merge pull request".[m[25;63H[K[25;63H22,1[11C1%[21;1H[?12l[?25h[?25l
+[7m[46m[[6C][m[25;64H3[22;1H[?12l[?25h[?25l[7m[GitLab][m
+[7m[46m[[12C][m[25;64H4[23;1H[?12l[?25h[?25l[7m[[12C][m[25;64H5[24;1H[?12l[?25h[?25l[1;24r[1;1H[4M[1;25r[22;1H[7m`libgit2` is licensed under a **very permissive license** (GPLv2 with a special
+Linking Exception).  This basically means that you can link it (unmodified)
+with any kind of software without having to release its source code.[m[25;63H[K[25;63H26,0-1[9C1%[21;1H[?12l[?25h[?25l[25;64H7,1  [22;1H[?12l[?25h[?25l[25;64H8[23;1H[?12l[?25h[?25l[25;64H9[24;1H[?12l[?25h[?25l[1;24r[1;1H[4M[1;25r[21;1H[7mAdditionally, the example code has been released to the public domain (see the
+[separate license](examples/COPYING) for more information).[m
+
+[38;5;225mTable of Contents[m[25;63H[K[25;63H30,1[11C2%[21;1H[?12l[?25h[?25l
+[7m[46m[[16C][m[25;64H1[22;1H[?12l[?25h[?25l[7m[[16C][m[25;64H2,0-1[23;1H[?12l[?25h[?25l[25;64H3,1  [24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[24;1H[38;5;81m=================[m[25;63H[K[25;63H34,1[11C2%[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[25;63H[K[25;63H35,0-1[9C2%[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[24;1H[93m*[m[7m [Using libgit2](#using-libgit2)[m[25;63H[K[25;63H36,1[11C2%[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[24;1H[93m*[m[7m [Quick Start](#quick-start)[m[25;63H[K[25;63H37,1[11C3%[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[24;1H[93m*[m[7m [Getting Help](#getting-help)[m[25;63H[K[25;63H38,1[11C3%[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[24;1H[93m*[m[7m [What It Can Do](#what-it-can-do)[m[25;63H[K[25;63H39,1[11C3%[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[24;1H[93m*[m[7m [Optional dependencies](#optional-dependencies)[m[25;63H[K[25;63H40,1[11C3%[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[24;1H[93m*[m[7m [Initialization](#initialization)[m[25;63H[K[25;63H41,1[11C4%[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[24;1H[93m*[m[7m [Threading](#threading)[m[25;63H[K[25;63H42,1[11C4%[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[24;1H[93m*[m[7m [Conventions](#conventions)[m[25;63H[K[25;63H43,1[11C4%[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[24;1H[93m*[m[7m [Building libgit2 - Using CMake](#building-libgit2---using-cmake)[m[25;63H[K[25;63H44,1[11C4%[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[24;1H[93m    *[m[7m [Building](#building)[m[25;63H[K[25;63H45,1[11C5%[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[24;1H[93m    *[m[7m [Installation](#installation)[m[25;63H[K[25;63H46,1[11C5%[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[24;1H[93m    *[m[7m [Advanced Usage](#advanced-usage)[m[25;63H[K[25;63H47,1[11C5%[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[24;1H[93m    *[m[7m [Compiler and linker options](#compiler-and-linker-options)[m[25;63H[K[25;63H48,1[11C5%[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[24;1H[93m    *[m[7m [MacOS X](#macos-x)[m[25;63H[K[25;63H49,1[11C6%[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[24;1H[93m    *[m[7m [Android](#android)[m[25;63H[K[25;63H50,1[11C6%[24;1H[?12l[?25h[?25l[1;24r[24;1H
+[1;25r[24;1H[93m    *[m[7m [MinGW](#mingw)[m[25;63H[K[25;63H51,1[11C6%[24;1H[?12l[?25h[?25l[25;63H[K[25;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"README.md" 429L, 16558C written
+[?1l>[?12l[?25h[?1049lbash-4.2$ ls
+api.docurium  CMakeLists.txt  examples	       package.json  src
+AUTHORS       COPYING	      fuzzers	       README.md     tests
+ci	      deps	      git.git-authors  script
+cmake	      docs	      include	       SECURITY.md
+bash-4.2$ cd ..
+bash-4.2$ ls
+mylibgit  new_project1	project-1
+bash-4.2$ cd project-1/
+bash-4.2$ ls
+commands.script  cpuinfo.txt  file.c	  interrupts.txt  meminfo.txt  simple.c
+cpu.c		 driver.c     git.script  lspci.txt	  simple
+bash-4.2$ cd ..[K ../new_project1/
+bash-4.2$ clear
+[3;J[H[2Jbash-4.2$ ls
+commands.script  cpuinfo.txt  file.c	  interrupts.txt  meminfo.txt  simple.c
+cpu.c		 driver.c     git.script  lspci.txt	  simple
+bash-4.2$ git [K[K[K[Ktou[K[K[Kvim r[KREADM[K[K[K[K[K[K[K[K[Ktouc README
+bash: touc: command not found
+bash-4.2$ touch README
+bash-4.2$ vim[K[K[Kvim [K[K[K[Kv[Kvim CONTRIBUTING.md
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"CONTRIBUTING.md" [New File][>c[2;1H[94m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [24;1H~                                                                               [m[25;63H0,0-1[9CAll[1;1H[?12l[?25h[27m[m[H[2J[?25l[2;1H[94m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [24;1H~                                                                               [m[25;63H0,0-1[9CAll"CONTRIBUTING.md" [New File][1;1H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;63H0,1[11CAll[1;1H[?12l[?25h[?25lt[25;63H1,2[1;2H[?12l[?25h[?25le[25;65H3[1;3H[?12l[?25h[?25la[25;65H4[1;4H[?12l[?25h[?25ls[25;65H5[1;5H[?12l[?25h[?25lt[25;65H6[1;6H[?12l[?25h[?25lt[25;65H7[1;7H[?12l[?25h[?25le[25;65H8[1;8H[?12l[?25h[?25l[1;7H[K[25;65H7[1;7H[?12l[?25h[?25l[1;6H[K[25;65H6[1;6H[?12l[?25h[?25l[1;5H[K[25;65H5[1;5H[?12l[?25h[?25l[1;4H[K[25;65H4[1;4H[?12l[?25h[?25l[1;3H[K[25;65H3[1;3H[?12l[?25h[?25l[1;2H[K[25;65H2[1;2H[?12l[?25h[?25l[1;1H[K[25;65H1[1;1H[?12l[?25h[?25lc[25;65H2[1;2H[?12l[?25h[?25l[1;1H[K[25;65H1[1;1H[?12l[?25h[?25lv[25;65H2[1;2H[?12l[?25h[?25le[25;65H3[1;3H[?12l[?25h[?25lr[25;65H4[1;4H[?12l[?25h[?25ls[25;65H5[1;5H[?12l[?25h[?25li[25;65H6[1;6H[?12l[?25h[?25lo[25;65H7[1;7H[?12l[?25h[?25ln[25;65H8[1;8H[?12l[?25h[?25l1[25;65H9[1;9H[?12l[?25h[25;1H[K[1;8H[?25l[25;63H1,8[11CAll[1;8H[?12l[?25h[?25l[25;63H[K[25;1H:[?12l[?25hW[?25l[?12l[?25h[?25l[25;2H[K[25;2H[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"CONTRIBUTING.md" [New] 1L, 9C written
+[?1l>[?12l[?25h[?1049lbash-4.2$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gdbinit
+#	CONTRIBUTING.md
+#	README
+#	commands.script
+#	cpuinfo.txt
+#	git.script
+#	interrupts.txt
+#	lspci.txt
+#	meminfo.txt
+#	simple
+nothing added to commit but untracked files present (use "git add" to track)
+bash-4.2$ ¬gi[K[K[K[H[2Jbash-4.2$ git add README 
+bash-4.2$ git a[Kstatus
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   README
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gdbinit
+#	CONTRIBUTING.md
+#	commands.script
+#	cpuinfo.txt
+#	git.script
+#	interrupts.txt
+#	lspci.txt
+#	meminfo.txt
+#	simple
+bash-4.2$ [H[2Jbash-4.2$ git [K[K[K[Kv[Kgit add CONTRIBUTING.md 
+bash-4.2$ vim con[K[K[KCONTRIBUTING.md 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"CONTRIBUTING.md" 1L, 9C[>c[1;1Hversion1
+[94m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [24;1H~                                                                               [m[25;63H1,1[11CAll[1;1H[?12l[?25h[27m[m[H[2J[?25l[1;1Hversion1
+[94m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [24;1H~                                                                               [m[25;63H1,1[11CAll"CONTRIBUTING.md" 1L, 9C[1;1H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;63H1,9[11CAll[1;9H[?12l[?25h[?25l[2;1H[K[25;63H2,1[2;1H[?12l[?25h[?25lv[25;65H2[2;2H[?12l[?25h[?25le[25;65H3[2;3H[?12l[?25h[?25lr[25;65H4[2;4H[?12l[?25h[?25ls[25;65H5[2;5H[?12l[?25h[?25li[25;65H6[2;6H[?12l[?25h[?25lo[25;65H7[2;7H[?12l[?25h[?25ln[25;65H8[2;8H[?12l[?25h[?25l2[25;65H9[2;9H[?12l[?25h[25;1H[K[2;8H[?25l[25;63H2,8[11CAll[2;8H[?12l[?25h[?25l[25;63H[K[25;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"CONTRIBUTING.md" 2L, 18C written
+[?1l>[?12l[?25h[?1049lbash-4.2$ git [K[K[K[Kgit status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   CONTRIBUTING.md
+#	new file:   README
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   CONTRIBUTING.md
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gdbinit
+#	commands.script
+#	cpuinfo.txt
+#	git.script
+#	interrupts.txt
+#	lspci.txt
+#	meminfo.txt
+#	simple
+bash-4.2$ clear
+[3;J[H[2Jbash-4.2$ gi[K[Kgit did[K[K[K[K[K[K[Kgit diff
+[?1h=diff --git a/CONTRIBUTING.md b/CONTRIBUTING.md[m
+index 5bdcfc1..60211be 100644[m
+--- a/CONTRIBUTING.md[m
++++ b/CONTRIBUTING.md[m
+@@ -1 +1,2 @@[m
+ version1[m
++version2[m
+[K[?1l>bash-4.2$ [H[2Jbash-4.2$ git commit
+[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H".git/COMMIT_EDITMSG" 30L, 755C[2;1H# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Committer: Carson O Barnett <cob0013@tux239.eng.auburn.edu>
+#
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#[7Cnew file:   CONTRIBUTING.md
+#[7Cnew file:   README
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#[7Cmodified:   CONTRIBUTING.md
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#[7C.gdbinit
+#[7Ccommands.script[1;1H[?12l[?25h[?25l[25;1H[97m[41mE353: Nothing in register "[m[25;28H[K[1;1H[?12l[?25h
+[7C[?25l[25;1H[1m-- INSERT --[m[25;13H[K[2;7He enter the commit message for your changes. Lines starting[2;66H[K[2;7H[?12l[?25h[?25le enter the commit message for your changes. Lines starting[2;65H[K[2;6H[?12l[?25h[?25l enter the commit message for your changes. Lines starting[2;64H[K[2;5H[?12l[?25h[25;1H[K[2;4H[?25l[?12l[?25h[1;1H[?25l[25;1H[1m-- INSERT --[1;1H[?12l[?25h[?25l[mp[?12l[?25h[?25lr[?12l[?25h[?25lo[?12l[?25h[?25lj[?12l[?25h[?25le[?12l[?25h[?25lc[?12l[?25h[?25lt[?12l[?25h[?25l [?12l[?25h[?25l2[?12l[?25h[25;1H[K[1;9H[?25l[?12l[?25h[?25l[25;1H:[?12l[?25hwq[?25l[25;3H[K[25;3H[?12l[?25h[?25l[25;2H[K[25;2H[?12l[?25h [1;9H [?25l[25;1H[1m-- INSERT --[1;9H[?12l[?25h[m2[?25l[1;9H[K[1;9H[?12l[?25h[?25l1[?12l[?25h[25;1H[K[1;9H[?25l[?12l[?25h[?25l[25;1H:[?12l[?25hwq[?25l".git/COMMIT_EDITMSG" 30L, 761C written
+[?1l>[?12l[?25h[?1049l[master b5dfddc] project 1
+ Committer: Carson O Barnett <cob0013@tux239.eng.auburn.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 1 insertion(+)
+ create mode 100644 CONTRIBUTING.md
+ create mode 100644 README
+bash-4.2$ git commit
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   CONTRIBUTING.md
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gdbinit
+#	commands.script
+#	cpuinfo.txt
+#	git.script
+#	interrupts.txt
+#	lspci.txt
+#	meminfo.txt
+#	simple
+no changes added to commit (use "git add" and/or "git commit -a")
+bash-4.2$ clear
+[3;J[H[2Jbash-4.2$ git log
+[?1h=commit b5dfddc41a2621df2e7d5e0ecf5c4894f21fdef4[m
+Author: Carson O Barnett <cob0013@tux239.eng.auburn.edu>[m
+Date:   Mon Jan 18 21:21:56 2021 -0600[m
+[m
+    project 1[m
+[m
+commit de5ddbc05b3447e6253dbd19fd0cfe57ab5f141f[m
+Author: Carson O Barnett <cob0013@tux239.eng.auburn.edu>[m
+Date:   Mon Jan 18 21:12:01 2021 -0600[m
+[m
+    Initial project 1[m
+[K[?1l>bash-4.2$ e[Kexit
+exit
+
+Script done on Mon 18 Jan 2021 09:22:57 PM CST

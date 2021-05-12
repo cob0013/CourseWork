@@ -1,0 +1,46 @@
+Script started on Tue 02 Feb 2021 03:00:10 PM CST
+[?1034hbash-4.2$ ls
+asst0  cs161-binutils-1.5  cs161-gdb-1.5  run.script  sys161-1.14
+bin    cs161-gcc-1.5	   root		  src	      tools
+bash-4.2$ cd root/
+bash-4.2$ pwd
+/home/u1/cob0013/cs161/root
+bash-4.2$ ./sys161 kernel
+sys161: System/161 release 1.14, compiled Jan 28 2021 16:52:09
+
+OS/161 base system version 1.10
+Copyright (c) 2000, 2001, 2002, 2003
+   President and Fellows of Harvard College.  All rights reserved.
+
+Put-your-group-name-here's system version 0 (ASST0 #1)
+
+Cpu is MIPS r2000/r3000
+1872k physical memory available
+Device probe...
+lamebus0 (system main bus)
+emu0 at lamebus0
+ltrace0 at lamebus0
+ltimer0 at lamebus0
+hardclock on ltimer0 (100 hz)
+beep0 at ltimer0
+rtclock0 at ltimer0
+lrandom0 at lamebus0
+random0 at lrandom0
+lser0 at lamebus0
+con0 at lser0
+pseudorand0 (virtual)
+
+OS/161 kernel [? for menu]: 
+OS/161 kernel [? for menu]: p /sbin/poweroff : >r  <return? >
+Operation took 0.000162800 seconds
+OS/161 kernel [? for menu]: Shutting down.
+The system is halted.
+sys161: 761765544 cycles (7166705k, 18u, 754598821i)
+sys161: 3725 irqs 6 exns 0r/0w disk 35r/712w console 8r/0w/3m emufs 0r/0w net
+sys161: Elapsed real time: 30.466356 seconds (25.0035 mhz)
+sys161: Elapsed virtual time: 30.470621760 seconds (25 mhz)
+bash-4.2$ clear
+[3;J[H[2Jbash-4.2$ exit
+exit
+
+Script done on Tue 02 Feb 2021 03:01:05 PM CST

@@ -1,0 +1,35 @@
+1. My scheduling mechanism calls each scheduling policy
+    depending on the input taken from the command line.
+
+
+2.  My implementation was similary for all three algorithms. I 
+    simulated time passing, and as a process arrived, I put it
+    on the ready queue, and then ran the process. The only
+    thing that changed between the algorithms was in what order
+    I pushed and popped processes onto the queue.
+
+3. Wait time = (finish_time - arrival_time) - burst_time
+
+4. Response time = start time - arrival time
+
+5. turnaround time = finish time - arrival time
+
+6. I used dr. Qin's example and manipulated it a little bit to match
+    the projects format.
+
+
+1. My solution is fairly generaly, I broke it up into multiple functions
+    in order to maintain its generallity
+
+2. It would be easy, you would just need to add a new policy to policy_t
+    and add it to the switch statement, then you coould write the algorithm
+
+3. If the program sees an error in the input, it will not allow the program
+    to continue, and gives the user the programs usage instructions
+
+1. yes I would say my code is pretty elagant, I made sure to use good programming style
+
+2. I like my solutions, specifically the SRTF solution, I used a linear
+    scan to find the shortest runtime on the queue
+
+3. yes I only used Dr. Qin's files and canvas

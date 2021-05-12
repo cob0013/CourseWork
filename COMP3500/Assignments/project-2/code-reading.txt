@@ -1,0 +1,27 @@
+1. 29
+2. lameBus
+3. spl high sets to the highest value disabling all interrupts,
+spl0 sets spl to 0 enabling all interrupts
+4. to ensure you get an actualy 32 bit int
+5. the old spl value
+6. 15
+7. either 100 hz or 10000 depending on if OPT_SYNCHPROBS
+8. d_open, d_close, d_io, d_ioctl
+9. 32
+10. 15
+11. fs_sync, fs_getvolname, fs_getroot, fs_unmount
+12. void thread_sleep(const void *addr);
+13. 32 bits
+14.  open, close, reclaim, read, readlink, getdirentry, write,
+ioctl, stat, gettype, tryseek, fsync, mmap, truncate, namefile, creat
+symlink, mkdir, link, remove, rmdir, rename, lookup, loopkarent
+15. 1024
+16. 8
+17. #define STDIN_FILENO 0 (line 23 of /kernel/unistd.h)
+18. yes the thread and scheduler bootstrap are independent of each other
+19. threads/processes taht have exited but not been fully deleted yet
+20. 32
+21. "device:", the vfs layer puts the device name in for
+22. string + "raw", i.e, "lhd0raw"
+23. vn_countlock
+24. block and character
