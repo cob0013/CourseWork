@@ -1,0 +1,78 @@
+Script started on Mon Nov 29 21:17:09 2021
+]1337;RemoteHost=carsonbarnett@MacBook-Pro.local]1337;CurrentDir=/Users/carsonbarnett/Desktop/School-Stuff/COMP4320/Projects/Project2/src]1337;ShellIntegrationVersion=11;shell=zsh[1m[7m%[27m[1m[0m                                                                                ]133;D;0]1337;RemoteHost=carsonbarnett@MacBook-Pro.local]1337;CurrentDir=/Users/carsonbarnett/Desktop/School-Stuff/COMP4320/Projects/Project2/src[0m[27m[24m[J]133;Acarsonbarnett@MacBook-Pro src % ]133;B[K[?2004hexitls  ./server[?2004l
+]133;C;Received: GET TestFile.html HTTP/1.0
+HTTP/1.0 200 Document Follows
+Content-Type: text/plain
+Content-Length:0
+
+Getting packets from file
+Packet stored, need to do error checking before sending packet
+Error checking done
+Sending packet with sequence number 0 to client
+Timeout, need to resend packet with sequence number: 0
+Sending packet with sequence number 0 to client
+Timeout, need to resend packet with sequence number: 0
+Sending packet with sequence number 0 to client
+Received ACK for sequence number: 0
+Packet stored, need to do error checking before sending packet
+Error checking done
+Sending packet with sequence number 1 to client
+Received ACK for sequence number: 1
+Packet stored, need to do error checking before sending packet
+Error checking done
+Sending packet with sequence number 2 to client
+Timeout, need to resend packet with sequence number: 2
+Sending packet with sequence number 2 to client
+NAK Received, need to resend packet
+Sending packet with sequence number 2 to client
+Received ACK for sequence number: 2
+Packet stored, need to do error checking before sending packet
+Error checking done
+Sending packet with sequence number 3 to client
+NAK Received, need to resend packet
+Sending packet with sequence number 3 to client
+Timeout, need to resend packet with sequence number: 3
+Sending packet with sequence number 3 to client
+Timeout, need to resend packet with sequence number: 3
+Sending packet with sequence number 3 to client
+NAK Received, need to resend packet
+Sending packet with sequence number 3 to client
+Timeout, need to resend packet with sequence number: 3
+Sending packet with sequence number 3 to client
+Timeout, need to resend packet with sequence number: 3
+Sending packet with sequence number 3 to client
+Timeout, need to resend packet with sequence number: 3
+Sending packet with sequence number 3 to client
+Timeout, need to resend packet with sequence number: 3
+Sending packet with sequence number 3 to client
+NAK Received, need to resend packet
+Sending packet with sequence number 3 to client
+NAK Received, need to resend packet
+Sending packet with sequence number 3 to client
+Received ACK for sequence number: 3
+Packet stored, need to do error checking before sending packet
+Error checking done
+Sending packet with sequence number 4 to client
+Received ACK for sequence number: 4
+Packet stored, need to do error checking before sending packet
+Error checking done
+Sending packet with sequence number 5 to client
+NAK Received, need to resend packet
+Sending packet with sequence number 5 to client
+Received ACK for sequence number: 5
+Packet stored, need to do error checking before sending packet
+Error checking done
+Sending packet with sequence number 6 to client
+Timeout, need to resend packet with sequence number: 6
+Sending packet with sequence number 6 to client
+Received ACK for sequence number: 6
+Packet stored, need to do error checking before sending packet
+Error checking done
+Sending packet with sequence number 7 to client
+NAK Received, need to resend packet
+Sending packet with sequence number 7 to client
+Received ACK for sequence number: 7
+All packets are sent, closing server
+[1m[7m%[27m[1m[0m                                                                                ]133;D;0]1337;RemoteHost=carsonbarnett@MacBook-Pro.local]1337;CurrentDir=/Users/carsonbarnett/Desktop/School-Stuff/COMP4320/Projects/Project2/src[0m[27m[24m[J]133;Acarsonbarnett@MacBook-Pro src % ]133;B[K[?2004heexit[?2004l
+]133;C;
+Script done on Mon Nov 29 21:18:32 2021

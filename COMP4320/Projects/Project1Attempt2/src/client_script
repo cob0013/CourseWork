@@ -1,0 +1,39 @@
+Script started on Tue Nov  2 21:36:59 2021
+]1337;RemoteHost=carsonbarnett@MacBook-Pro.local]1337;CurrentDir=/Users/carsonbarnett/Desktop/School-Stuff/COMP4320/Projects/Project1Attempt2/src]1337;ShellIntegrationVersion=11;shell=zsh[1m[7m%[27m[1m[0m                                                                                ]133;D;0]1337;RemoteHost=carsonbarnett@MacBook-Pro.local]1337;CurrentDir=/Users/carsonbarnett/Desktop/School-Stuff/COMP4320/Projects/Project1Attempt2/src[0m[27m[24m[J]133;Acarsonbarnett@MacBook-Pro src % ]133;B[K[?2004hclear./client 192.168.1.106[22Dclear                 [17D./client 192.168.1.106[?2004l
+]133;C;Sending HTTP Get Request to server
+Received Packet from server, writing data to output file
+Packet has errors
+Data written
+Received Packet from server, writing data to output file
+Data written
+Received Packet from server, writing data to output file
+Data written
+Received Packet from server, writing data to output file
+Data written
+Received Packet from server, writing data to output file
+Data written
+Received Packet from server, writing data to output file
+Data written
+Received Packet from server, writing data to output file
+Data written
+Received Packet from server, writing data to output file
+Data written
+Received Packet from server, writing data to output file
+Data written
+^C
+[1m[7m%[27m[1m[0m                                                                                ]133;D;130]1337;RemoteHost=carsonbarnett@MacBook-Pro.local]1337;CurrentDir=/Users/carsonbarnett/Desktop/School-Stuff/COMP4320/Projects/Project1Attempt2/src[0m[27m[24m[J]133;Acarsonbarnett@MacBook-Pro src % ]133;B[K[?2004hqquit[?2004l
+]133;C;zsh: command not found: quit
+[1m[7m%[27m[1m[0m                                                                                ]133;D;127]1337;RemoteHost=carsonbarnett@MacBook-Pro.local]1337;CurrentDir=/Users/carsonbarnett/Desktop/School-Stuff/COMP4320/Projects/Project1Attempt2/src[0m[27m[24m[J]133;Acarsonbarnett@MacBook-Pro src % ]133;B[K[?2004hq lls[?2004l
+]133;C;OutputClient.txt	client.cpp		server.cpp
+TestFile.html		client_script		server_script
+client			server			unp.h
+[1m[7m%[27m[1m[0m                                                                                ]133;D;0]1337;RemoteHost=carsonbarnett@MacBook-Pro.local]1337;CurrentDir=/Users/carsonbarnett/Desktop/School-Stuff/COMP4320/Projects/Project1Attempt2/src[0m[27m[24m[J]133;Acarsonbarnett@MacBook-Pro src % ]133;B[K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]133;C;]133;D;130]1337;RemoteHost=carsonbarnett@MacBook-Pro.local]1337;CurrentDir=/Users/carsonbarnett/Desktop/School-Stuff/COMP4320/Projects/Project1Attempt2/src[0m[27m[24m[J]133;Acarsonbarnett@MacBook-Pro src % ]133;B[K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]133;C;]133;D;130]1337;RemoteHost=carsonbarnett@MacBook-Pro.local]1337;CurrentDir=/Users/carsonbarnett/Desktop/School-Stuff/COMP4320/Projects/Project1Attempt2/src[0m[27m[24m[J]133;Acarsonbarnett@MacBook-Pro src % ]133;B[K[?2004hcclear[?2004l
+]133;C;[H[2J[1m[7m%[27m[1m[0m                                                                                ]133;D;0]1337;RemoteHost=carsonbarnett@MacBook-Pro.local]1337;CurrentDir=/Users/carsonbarnett/Desktop/School-Stuff/COMP4320/Projects/Project1Attempt2/src[0m[27m[24m[J]133;Acarsonbarnett@MacBook-Pro src % ]133;B[K[?2004hsscript[?2004l
+]133;C;Script started, output file is typescript
+]1337;RemoteHost=carsonbarnett@MacBook-Pro.local]1337;CurrentDir=/Users/carsonbarnett/Desktop/School-Stuff/COMP4320/Projects/Project1Attempt2/src]1337;ShellIntegrationVersion=11;shell=zsh[1m[7m%[27m[1m[0m                                                                                ]133;D;0]1337;RemoteHost=carsonbarnett@MacBook-Pro.local]1337;CurrentDir=/Users/carsonbarnett/Desktop/School-Stuff/COMP4320/Projects/Project1Attempt2/src[0m[27m[24m[J]133;Acarsonbarnett@MacBook-Pro src % ]133;B[K[?2004hrrm typescript[1m [0m[0m [?2004l
+]133;C;[1m[7m%[27m[1m[0m                                                                                ]133;D;0]1337;RemoteHost=carsonbarnett@MacBook-Pro.local]1337;CurrentDir=/Users/carsonbarnett/Desktop/School-Stuff/COMP4320/Projects/Project1Attempt2/src[0m[27m[24m[J]133;Acarsonbarnett@MacBook-Pro src % ]133;B[K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                ]133;C;]133;D;130]1337;RemoteHost=carsonbarnett@MacBook-Pro.local]1337;CurrentDir=/Users/carsonbarnett/Desktop/School-Stuff/COMP4320/Projects/Project1Attempt2/src[0m[27m[24m[J]133;Acarsonbarnett@MacBook-Pro src % ]133;B[K[?2004hsstop[?2004l
+]133;C;zsh: command not found: stop
+[1m[7m%[27m[1m[0m                                                                                ]133;D;127]1337;RemoteHost=carsonbarnett@MacBook-Pro.local]1337;CurrentDir=/Users/carsonbarnett/Desktop/School-Stuff/COMP4320/Projects/Project1Attempt2/src[0m[27m[24m[J]133;Acarsonbarnett@MacBook-Pro src % ]133;B[K[?2004h
