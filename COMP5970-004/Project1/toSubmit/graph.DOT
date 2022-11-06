@@ -1,0 +1,12 @@
+// Tree
+graph {
+	Seq_5 -- InternalNode0 [label=78.5 weight=78.5]
+	Seq_6 -- InternalNode0 [label=78.5 weight=78.5]
+	Seq_4 -- InternalNode1 [label=106.25 weight=106.25]
+	InternalNode0 -- InternalNode1 [label=27.75 weight=27.75]
+	Seq_1 -- InternalNode2 [label=63.5 weight=63.5]
+	Seq_2 -- InternalNode2 [label=63.5 weight=63.5]
+	Seq_3 -- InternalNode3 [label=168.125 weight=168.125]
+	InternalNode1 -- InternalNode3 [label=61.875 weight=61.875]
+	InternalNode2 -- InternalNode3 [label=82.90625 weight=82.90625]
+}

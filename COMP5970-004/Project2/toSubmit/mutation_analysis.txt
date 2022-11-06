@@ -1,0 +1,40 @@
+synonomous
+non-synonomous: basic -> polar
+non-synonomous: polar -> nonpolar
+synonomous
+non-synonomous: basic -> nonpolar
+non-synonomous: nonpolar -> nonpolar
+non-sense
+synonomous
+synonomous
+synonomous
+synonomous
+synonomous
+non-synonomous: nonpolar -> nonpolar
+non-synonomous: nonpolar -> nonpolar
+non-synonomous: acidic -> polar
+non-synonomous: nonpolar -> nonpolar
+non-synonomous: basic -> polar
+non-synonomous: acidic -> acidic
+synonomous
+non-synonomous: acidic -> polar
+synonomous
+non-synonomous: nonpolar -> polar
+non-synonomous: polar -> polar
+synonomous
+non-synonomous: acidic -> acidic
+non-synonomous: polar -> nonpolar
+non-synonomous: nonpolar -> basic
+non-synonomous: nonpolar -> polar
+synonomous
+non-synonomous: polar -> basic
+non-synonomous: nonpolar -> acidic
+non-synonomous: polar -> polar
+non-synonomous: polar -> polar
+non-synonomous: nonpolar -> nonpolar
+synonomous
+synonomous
+non-synonomous: nonpolar -> polar
+non-synonomous: nonpolar -> polar
+non-synonomous: polar -> basic
+synonomous
